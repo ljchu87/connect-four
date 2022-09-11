@@ -78,6 +78,14 @@ let board, turn, winner
 
 /*------------------ Cached Element References ------------------------*/
 
+const circleEls = document.querySelectorAll(".grid > div")
+const gameStatus = document.querySelector("#game-status")
+
 /*----------------------- Event Listeners -----------------------------*/
 
 /*-------------------------- Functions --------------------------------*/
+
+function init () {
+
+  
+}
