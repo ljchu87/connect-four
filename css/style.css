@@ -1,13 +1,21 @@
 .grid {
   border: 1px solid black;
-  height: 480px;
-  width: 560px;
+  height: 720px;
+  width: 840px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: black;
 }
 
 .grid > div {
-height: 80px;
-width: 80px;
-background-color: blue;
+height: 120px;
+width: 120px;
+background-color: white;
+border-radius: 50%;
+}
+
+.grid>div:hover {
+  background-color: rgb(30, 102, 164);
 }

@@ -74,18 +74,49 @@ const winningCombos = [
 
 /*--------------------- Variables (state) ----------------------------*/
 
-let board, turn, winner
+let connectGrid, turn, winner
 
 /*------------------ Cached Element References ------------------------*/
 
 const circleEls = document.querySelectorAll(".grid > div")
 const gameStatus = document.querySelector("#game-status")
+const gridEl = document.querySelector(".grid")
 
 /*----------------------- Event Listeners -----------------------------*/
 
+
+
 /*-------------------------- Functions --------------------------------*/
 
-function init () {
+init()
+function init() {
+  connectGrid = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+  turn = 1
+  winner = null
+  render()
+}
 
-  
+function render() {
+  connectGrid.forEach(function(circle, idx) {
+    if (circle === 1) {
+      circleEls[idx].textContent = "X"
+    } else if (circle === -1) {
+      circleEls[idx].textContent = "O"
+    } else {
+      circleEls[idx].textContent = ""
+    }
+  })
+  if (winner === null) {
+    if (turn === 1) {
+      gameStatus.textContent = "Player 1: It is your turn!"
+    } else {
+      gameStatus.textContent = "Player 2: It is your turn!"
+    }
+  } else if (winner === "T") {
+    gameStatus.textContent = "It's a tie!"
+  } else if (winner === 1) {
+    gameStatus.textContent = "CONGRATS! Player 1 wins the game!"
+  } else if (winner === -1) {
+    gameStatus.textContent = "CONGRATS! Player 2 wins the game!"
+  }
 }
