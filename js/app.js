@@ -4,11 +4,13 @@
 
 /*--------------------- Variables (state) ----------------------------*/
 
-let connectGrid, turn, winner
+let board, turn, winner
 
 /*------------------ Cached Element References ------------------------*/
 
 const circleEls = document.querySelector(".grid")
+const boardEls = document.querySelectorAll(".grid > div")
+
 
 /*----------------------- Event Listeners -----------------------------*/
 
@@ -18,7 +20,7 @@ circleEls.addEventListener("click", handleClick)
 
 init()
 function init() {
-  connectGrid = [
+  boardArr = [
     null, null, null, null, null, null, null, 
     null, null, null, null, null, null, null, 
     null, null, null, null, null, null, null, 
@@ -32,7 +34,7 @@ function init() {
 }
 
 function handleClick(evt){
-  connectGrid.forEach (function (){
-    console.log(evt.target.id);
-  })
+  let idx = parseInt(evt.target.id.replace("token", ""))
+  console.log("idx that was clicked", idx);
 }
+
