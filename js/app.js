@@ -84,39 +84,25 @@ const gridEl = document.querySelector(".grid")
 
 /*----------------------- Event Listeners -----------------------------*/
 
-
+gridEl.addEventListener("click", function() {
+  for (let i = 0; i < connectGrid.length; i++) {
+    console.log(connectGrid[i]);
+  }
+})
 
 /*-------------------------- Functions --------------------------------*/
 
 init()
 function init() {
-  connectGrid = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+  connectGrid = [
+    null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, 
+  ]
   turn = 1
   winner = null
   render()
-}
-
-function render() {
-  connectGrid.forEach(function(circle, idx) {
-    if (circle === 1) {
-      circleEls[idx].textContent = "X"
-    } else if (circle === -1) {
-      circleEls[idx].textContent = "O"
-    } else {
-      circleEls[idx].textContent = ""
-    }
-  })
-  if (winner === null) {
-    if (turn === 1) {
-      gameStatus.textContent = "Player 1: It is your turn!"
-    } else {
-      gameStatus.textContent = "Player 2: It is your turn!"
-    }
-  } else if (winner === "T") {
-    gameStatus.textContent = "It's a tie!"
-  } else if (winner === 1) {
-    gameStatus.textContent = "CONGRATS! Player 1 wins the game!"
-  } else if (winner === -1) {
-    gameStatus.textContent = "CONGRATS! Player 2 wins the game!"
-  }
 }
