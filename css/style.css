@@ -1,21 +1,32 @@
-.grid {
-  border: 1px solid black;
-  height: 720px;
-  width: 840px;
+body {
+  height: 1000vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-  background-color: black;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 
+.grid {
+  grid-template-columns: repeat(7, 9vmin);
+  grid-template-rows: repeat(6, 9vmin);
+  display: grid;
+  border: 5px solid red;
+  border-radius: 5%;
+  width: 70vmin;
+  height: 60vmin;
+  background-color: blue;
+  padding: 1%;
+  gap: 1.5%;
+}
+  
 .grid > div {
-height: 120px;
-width: 120px;
 background-color: white;
 border-radius: 50%;
+border: 5px solid black;
+text-align: center;
+vertical-align: middle;
 }
 
 .grid>div:hover {
-  background-color: rgb(30, 102, 164);
+  background-color: rgb(180, 176, 176);
 }
