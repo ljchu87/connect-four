@@ -147,17 +147,13 @@ function handleClick(evt){
 }
 
 function handlePlacement(idx) {
-  let openPosition = idx + 35
-  
-  for(let i = 41; i > 0; i-=7) {
-    if (board[idx] === null) {
-      return idx
-    } else {
-      console.log(idx);
-      return idx
-    }
+  for(let i = (idx%7)+35 ; i >= 0; i-=7) {
+    console.log((idx%7)+35);
+    if (board[i] === null) {
+      // console.log(i)
+      return i
+    } 
   }
-  return openPosition
 }
 
 function getWinner(){
