@@ -82,7 +82,6 @@ const circleEls = document.querySelector(".grid")
 const boardEls = document.querySelectorAll(".grid > div")
 const messageEl = document.querySelector("#game-status")
 const restartBtn = document.querySelector("#restart-button")
-console.log (restartBtn)
 
 /*----------------------- Event Listeners -----------------------------*/
 
@@ -92,7 +91,6 @@ restartBtn.addEventListener("click", init)
 /*-------------------------- Functions --------------------------------*/
 init()
 function init() {
-  console.log("hello");
   board = [
     null, null, null, null, null, null, null, 
     null, null, null, null, null, null, null, 
@@ -151,6 +149,14 @@ function handleClick(evt){
 function handlePlacement(idx) {
   let openPosition = idx + 35
   
+  for(let i = 41; i > 0; i-=7) {
+    if (board[idx] === null) {
+      return idx
+    } else {
+      console.log(idx);
+      return idx
+    }
+  }
   return openPosition
 }
 
