@@ -81,17 +81,18 @@ let board, turn, winner
 const circleEls = document.querySelector(".grid")
 const boardEls = document.querySelectorAll(".grid > div")
 const messageEl = document.querySelector("#game-status")
-const startBtn = document.querySelector("#start-button")
-
+const restartBtn = document.querySelector("#restart-button")
+console.log (restartBtn)
 
 /*----------------------- Event Listeners -----------------------------*/
 
 circleEls.addEventListener("click", handleClick)
-startBtn.addEventListener("click", init)
+restartBtn.addEventListener("click", init)
 
 /*-------------------------- Functions --------------------------------*/
 init()
 function init() {
+  console.log("hello");
   board = [
     null, null, null, null, null, null, null, 
     null, null, null, null, null, null, null, 
@@ -106,35 +107,31 @@ function init() {
 }
 
 function render() {
-  board.forEach(function(circle, idx){
+  board.forEach(function(circle, idx) {
     if (circle === 1) {
       boardEls[idx].style.backgroundColor = "green"
-    }
-    else if (circle === -1) {
-      boardEls[idx].style.backgroundColor = "orange"
-    }
-    else {
-      boardEls[idx].innerText = ""
-    }
-  })
+    } else if (circle === -1) {
+        boardEls[idx].style.backgroundColor = "orange"
+      } else {
+        boardEls[idx].style.backgroundColor = "white"
+      }
+    })
 
-  if (winner === null){
-    if (turn === 1){
-      messageEl.textContent = "Player 1: It's time to play!"
+  if (winner === null) {
+    if (turn === 1) {
+      messageEl.textContent = "Player 1: It's your turn!"
     } else {
-      messageEl.textContent = "Player 2: It's time to play!"
+      messageEl.textContent = "Player 2: It's your turn!"
     }
   }
-
   else if (winner === "T") {
     messageEl.textContent = "It's a tie!"
   } else if (winner === 1) {
     messageEl.textContent = "CONGRATS! Player 1 wins the game!"
   } else if (winner === -1) {
-    messageEl.textContent = "CONGRATS! Player 2 wins the gane!"
+    messageEl.textContent = "CONGRATS! Player 2 wins the game!"
   }
 }
-
 
 function handleClick(evt){
   let idx = parseInt(evt.target.id.replace("token", ""))
@@ -153,9 +150,9 @@ function handleClick(evt){
 
 function handlePlacement(idx) {
   let openPosition = idx + 35
+  
   return openPosition
 }
-
 
 function getWinner(){
   let bestCombo = []
