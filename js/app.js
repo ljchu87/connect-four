@@ -138,12 +138,15 @@ function render() {
 
 function handleClick(evt){
   let idx = parseInt(evt.target.id.replace("token", ""))
-  // if (board[idx] || winner) {
-  //   return
-  // }
+  if (winner === 1 || winner === -1 || winner === "T") {
+    return
+  }
+  if (board[idx]){
+    return
+  }
   const corrIdx = handlePlacement(idx)
   board[corrIdx] = turn
-  turn *= -1
+  turn = turn * -1
   winner = getWinner()
   render()
 }
@@ -153,14 +156,21 @@ function handlePlacement(idx) {
   return openPosition
 }
 
-function getWinner() {
-  for (let i = 0; i < winningCombos.length; i++) {
-    if (Math.abs(board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]] + board[winningCombos[i][3]]) === 4)
-    return board[winningCombos[i][0]]
-  }
-  if (board.includes(null)) {
-    return null
-  } else {
+
+function getWinner(){
+  let bestCombo = []
+  winningCombos.forEach(function(combo){
+    let comboValue = board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]]
+    bestCombo.push(Math.abs(comboValue))
+  })
+  let winnerCombo = bestCombo.some(function(val){
+    return val === 4
+  })
+  
+  if (winnerCombo === true) {
+      return turn * -1
+  } else if (!board.some((value) => value === null)){
     return "T"
   }
+  return null
 }
