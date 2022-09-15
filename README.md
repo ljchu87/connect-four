@@ -9,6 +9,15 @@
 ---
 ### **Let's play** [**Connect Four!**](https://connect-four-leon-chu.netlify.app/)
 ---
-![alt text](images/connect-four-capture.png)
+### Wireframe:
+![Wireframe of Connect Four](images/wireframe-capture.png)
+### Post styling:
+![Connect Four screencapture](images/connect-four-capture.png)
+---
+## **Technologies Implemented:**
+1. JavaScript
+2. HTML
+3. CSS
+4. Bootstrap
 
 
