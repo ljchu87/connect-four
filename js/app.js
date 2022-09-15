@@ -82,6 +82,7 @@ const circleEls = document.querySelector(".grid")
 const boardEls = document.querySelectorAll(".grid > div")
 const messageEl = document.querySelector("#game-status")
 const restartBtn = document.querySelector("#restart-button")
+const titleEl = document.querySelector("#game-status")
 
 /*----------------------- Event Listeners -----------------------------*/
 
@@ -91,6 +92,7 @@ restartBtn.addEventListener("click", init)
 /*-------------------------- Functions --------------------------------*/
 init()
 function init() {
+  titleEl.className = "";
   board = [
     null, null, null, null, null, null, null, 
     null, null, null, null, null, null, null, 
@@ -126,8 +128,10 @@ function render() {
     messageEl.textContent = "It's a tie!"
   } else if (winner === 1) {
     messageEl.textContent = "CONGRATS! Player 1 wins the game!"
+    titleEl.className = "animate__animated animate__wobble"
   } else if (winner === -1) {
     messageEl.textContent = "CONGRATS! Player 2 wins the game!"
+    titleEl.className = "animate__animated animate__wobble"
   }
 }
 
