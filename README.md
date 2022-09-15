@@ -19,15 +19,20 @@
 5. To restart the game, simply press the "Restart" button
 
 ---
-### Wireframe:
+### **Wireframe:**
 ![Wireframe of Connect Four](images/wireframe-capture.png)
-### Post styling:
+### **Post styling:**
 ![Connect Four screencapture](images/connect-four-capture.png)
 ---
-## **Technologies Implemented:**
+### **Technologies Implemented:**
 1. JavaScript
 2. HTML
 3. CSS
 4. Bootstrap
+---
+### **Planed Future Enhancements**
+- Add running timer to the top left corner and then display how long it took until there was a winner or tie
+- Add a light/mode dark mode feature
+- Add a feature to play against the computer
 
 
