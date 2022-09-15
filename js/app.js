@@ -131,7 +131,7 @@ function render() {
     titleEl.className = "animate__animated animate__wobble"
   } else if (winner === -1) {
     messageEl.textContent = "CONGRATS! Player 2 wins the game!"
-    titleEl.className = "animate__animated animate__wobble"
+    titleEl.className = "animate__animated animate__heartBeat"
   }
 }
 
