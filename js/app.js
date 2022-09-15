@@ -1,7 +1,6 @@
 /*----------------------- Constants --------------------------------*/
 
 const buttonSound = new Audio("../audio/button-sound.wav")
-
 const winningCombos = [
   [0, 1, 2, 3],
   [41, 40, 39, 38],
