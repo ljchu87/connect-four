@@ -147,10 +147,9 @@ function handleClick(evt){
 }
 
 function handlePlacement(idx) {
-  for(let i = (idx%7)+35 ; i >= 0; i-=7) {
+  for(let i = (idx%7)+ 35; i >= 0; i-=7) {
     console.log((idx%7)+35);
     if (board[i] === null) {
-      // console.log(i)
       return i
     } 
   }

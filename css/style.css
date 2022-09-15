@@ -22,11 +22,43 @@ body {
 .grid > div {
 background-color: white;
 border-radius: 50%;
-border: 5px solid black;
+border: 5px solid rgb(65, 55, 55);
 text-align: center;
 vertical-align: middle;
 }
 
 .grid>div:hover {
   background-color: rgb(180, 176, 176);
+}
+
+h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+
+#game-status {
+  align-items: center;
+  padding: 5px 0;
+  color: rgb(0, 0, 0); 
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (max-width: 750px) {
+  #background-video { display: none; }
+  body {
+    background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+    background-size: cover;
+  }
 }
