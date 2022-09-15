@@ -37,6 +37,8 @@ vertical-align: middle;
 }
 
 h1 {
+  padding: 5px 0;
+  margin: 20px;
   font-family: 'Audiowide', cursive;
   font-size: 70px;
   text-shadow:
@@ -45,7 +47,10 @@ h1 {
   3px 3px 3px rgba(247, 7, 215, 0.25),
   10px 10px 20px rgba(202, 18, 212, 0.5),
   20px 40px 40px rgba(255, 255, 255, 0.5); 
+}
 
+h2 {
+  margin: 10px 10;
 }
 
 #game-status {
@@ -53,6 +58,8 @@ h1 {
   padding: 5px 0;
   color: rgb(255, 255, 255); 
 }
+
+
 
 #background-video {
   width: 100vw;
@@ -69,8 +76,6 @@ h1 {
 @media (max-width: 750px) {
   #background-video { display: none; }
   body {
-    background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
-    background-size: cover;
+    background-color: black;
   }
 }
-
