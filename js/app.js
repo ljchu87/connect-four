@@ -1,5 +1,7 @@
 /*----------------------- Constants --------------------------------*/
 
+const buttonSound = new Audio("../audio/button-sound.wav")
+
 const winningCombos = [
   [0, 1, 2, 3],
   [41, 40, 39, 38],
@@ -84,6 +86,11 @@ const messageEl = document.querySelector("#game-status")
 const restartBtn = document.querySelector("#restart-button")
 const titleEl = document.querySelector("#game-status")
 
+
+const soundEls = document.querySelector("grid > div")
+
+
+
 /*----------------------- Event Listeners -----------------------------*/
 
 circleEls.addEventListener("click", handleClick)
@@ -111,10 +118,13 @@ function render() {
     if (circle === 1) {
       boardEls[idx].style.backgroundColor = "green"
     } else if (circle === -1) {
-        boardEls[idx].style.backgroundColor = "orange"
-      } else {
-        boardEls[idx].style.backgroundColor = "white"
-      }
+      boardEls[idx].style.backgroundColor = "orange"
+    } else {
+      boardEls[idx].style.backgroundColor = "white"
+    }
+    setTimeout(function(){
+      buttonSound.play()
+      })
     })
 
   if (winner === null) {
