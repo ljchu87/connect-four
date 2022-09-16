@@ -35,7 +35,7 @@
 ### **Credits**
 - Background image: [Pixabay.com](https://pixabay.com/videos/search/motion%20backgrounds/?pagi=1&order=trending&cat=None)
 - Favicon: [Icons8.com](https://icons8.com/icons/set/favicon)
-- Box-shadow gradient: [Stackoverflow.com](https://icons8.com/icons/set/favicon)
+- Box-shadow gradient: [Stackoverflow.com](https://stackoverflow.com/questions/9649706/css3-box-shadow-linear-gradient)
 - Button sound: [Freesound.org](https://freesound.org/browse/tags/gaming/)
 
 
