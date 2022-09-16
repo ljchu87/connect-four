@@ -115,7 +115,7 @@ function render() {
     } else if (circle === -1) {
       boardEls[idx].style.backgroundColor = "white"
     } else {
-      boardEls[idx].style.background = "url()"
+      boardEls[idx].style.background = "url()" /* I purposely left the URL blank because this was an accident that I ended up working with. It made my board transparent which really lets the gradient shine through so I stuck with it */
     }
     setTimeout(function(){
       buttonSound.play()
