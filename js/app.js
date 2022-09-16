@@ -1,4 +1,4 @@
-/*----------------------- Constants --------------------------------*/
+/*----------------- Constants-----------------------*/
 
 const buttonSound = new Audio("../audio/button-sound.wav")
 const winningCombos = [
@@ -73,29 +73,25 @@ const winningCombos = [
   [13, 20, 27, 34],
 ]
 
-/*--------------------- Variables (state) ----------------------------*/
+/*------------ Variables (state) ---------------------*/
 
 let board, turn, winner
 
-/*------------------ Cached Element References ------------------------*/
+/*----------- Cached Element References ---------------*/
 
 const circleEls = document.querySelector(".grid")
 const boardEls = document.querySelectorAll(".grid > div")
 const messageEl = document.querySelector("#game-status")
 const restartBtn = document.querySelector("#restart-button")
 const titleEl = document.querySelector("#game-status")
-
-
 const soundEls = document.querySelector("grid > div")
 
-
-
-/*----------------------- Event Listeners -----------------------------*/
+/*------------- Event Listeners ----------------------*/
 
 circleEls.addEventListener("click", handleClick)
 restartBtn.addEventListener("click", init)
 
-/*-------------------------- Functions --------------------------------*/
+/*------------------ Functions -----------------------*/
 init()
 function init() {
   titleEl.className = "";
@@ -125,10 +121,6 @@ function render() {
       buttonSound.play()
       })
     })
-
-
-
-
 
   if (winner === null) {
     if (turn === 1) {
