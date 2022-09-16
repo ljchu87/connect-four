@@ -27,7 +27,7 @@
 3. CSS
 4. Bootstrap
 ---
-### **Planed Future Enhancements**
+### **Planned Future Enhancements**
 - Add running timer to the top left corner and then display how long it took until there was a winner or tie
 - Add a light/mode dark mode feature in the top right corner
 - Add a feature to play against the computer
