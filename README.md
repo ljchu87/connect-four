@@ -11,10 +11,13 @@
 3. On your turn, drop one of your colored squares from any open space in one the seven columns
 4. The game ends when there is 4-in-a-row or the game will reach a tie
 5. To restart the game, simply press the "Restart" button
-
+---
+### **Pseudocode:**
+![Pseudocode](images/pseudocode.png)
 ---
 ### **Wireframe:**
 ![Wireframe of Connect Four](images/wireframe-capture.png)
+---
 ### **Post styling:**
 ![Connect Four screencapture](images/connect-four-capture.png)
 ---
@@ -26,7 +29,13 @@
 ---
 ### **Planed Future Enhancements**
 - Add running timer to the top left corner and then display how long it took until there was a winner or tie
-- Add a light/mode dark mode feature
+- Add a light/mode dark mode feature in the top right corner
 - Add a feature to play against the computer
+---
+### **Credits**
+- Background image: [Pixabay.com](https://pixabay.com/videos/search/motion%20backgrounds/?pagi=1&order=trending&cat=None)
+- Favicon: [Icons8.com](https://icons8.com/icons/set/favicon)
+- Box-shadow gradient: [Stackoverflow.com](https://icons8.com/icons/set/favicon)
+- Button sound: [Freesound.org](https://freesound.org/browse/tags/gaming/)
 
 
