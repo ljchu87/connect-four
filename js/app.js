@@ -119,12 +119,16 @@ function render() {
     } else if (circle === -1) {
       boardEls[idx].style.backgroundColor = "orange"
     } else {
-      boardEls[idx].style.backgroundColor = "white"
+      boardEls[idx].style.background = "url()"
     }
     setTimeout(function(){
       buttonSound.play()
       })
     })
+
+
+
+
 
   if (winner === null) {
     if (turn === 1) {

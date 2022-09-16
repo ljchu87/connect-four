@@ -13,15 +13,15 @@ body {
   border-radius: 5%;
   width: 73vmin;
   height: 63vmin;
-  background-color: rgb(13, 13, 218);
+  background-color: rgb(9, 1, 250);
   padding: 1%;
   gap: 1.5%;
   box-shadow:
     inset 0 0 50px #fff,      
     inset 20px 0 80px #f0f,   
-    inset -20px 0 80px rgb(114, 97, 115),  
-    inset 20px 0 300px #f0f,  
-    inset -20px 0 300px rgb(255, 255, 255), 
+    inset -20px 0 80px rgb(225, 177, 228),  
+    inset 20px 0 300px rgb(233, 47, 153),  
+    inset -20px 0 300px rgb(216, 12, 234), 
     0 0 50px #fff,            
     -10px 0 80px #f0f,        
     10px 0 80px rgb(255, 255, 255);         
@@ -73,9 +73,8 @@ h2 {
   z-index: -1;
 }
 
-@media (max-width: 750px) {
-  #background-video { display: none; }
-  body {
-    background-color: black;
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px;
   }
 }
