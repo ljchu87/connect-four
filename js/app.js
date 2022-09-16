@@ -115,7 +115,7 @@ function init() {
 function render() {
   board.forEach(function(circle, idx) {
     if (circle === 1) {
-      boardEls[idx].style.backgroundColor = "lawngreen"
+      boardEls[idx].style.backgroundColor = "lime"
     } else if (circle === -1) {
       boardEls[idx].style.backgroundColor = "white"
     } else {
